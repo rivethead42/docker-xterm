@@ -12,7 +12,7 @@ WORKDIR /var/node/xterm
 
 RUN npm install bower -g && npm install && bower install --allow-root
 RUN groupadd nodejs
-RUN adduser --gid nodejs nodejs
+RUN adduser -a -G nodejs nodejs
 RUN chown -R nodejs:nodejs /var/node/xterm
 
 COMMAND npm start
