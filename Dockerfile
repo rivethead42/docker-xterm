@@ -11,6 +11,8 @@ RUN cd /var/node && git clone https://github.com/rivethead42/node-xterm.git xter
 WORKDIR /var/node/xterm
 
 RUN npm install bower -g && npm install && bower install --allow-root
-RUN groupadd nodejs && adduser --gid nodejs nodejs && chown -R nodejs:nodejs /var/node/xterm
+RUN groupadd nodejs
+RUN adduser --gid nodejs nodejs
+RUN chown -R nodejs:nodejs /var/node/xterm
 
 COMMAND npm start
