@@ -15,4 +15,4 @@ RUN groupadd nodejs
 RUN useradd -g nodejs nodejs
 RUN chown -R nodejs:nodejs /var/node/xterm
 
-COMMAND npm start
+CMD ["npm," "start"]
