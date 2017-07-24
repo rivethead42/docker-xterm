@@ -19,4 +19,4 @@ RUN chown -R nodejs:nodejs /var/node/xterm
 
 ENV NODE_ENV ${NODE_ENV}
 
-CMD ["usr", "local", "bin", "npm", "start"]
+CMD ["node", "/var/node/xterm/app.js"]
